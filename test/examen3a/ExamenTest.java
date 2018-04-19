@@ -71,7 +71,7 @@ public class ExamenTest {
 
         String esperado = "Maceta 11.1 descuento:22.2\n"
                 + "Martillo 33.3 peso:44.4\n"
-                + "Jarron 55.5 descuento:66.6\n"
+                + "Jarrón 55.5 descuento:66.6\n"
                 + "Martillo 77.7 peso:88.8\n";
         String producida = examen1.listarTodo();
         double dleve = levenshtein(producida, esperado);

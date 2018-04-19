@@ -121,6 +121,17 @@ public class ExamenTest {
         l.add(new Jarron(10000.1, 3));
         l.add(new Maceta(10, 300));
         assertEquals("Hay  un producto de más de 10000 en la lista se espera que el metodo devuelva true", true, examen1.hayProductoDeMasDe10000());
+        for (int i = 0; i < 10000000;i++) {
+            l.add(new Maceta(11000, 200));
+        }
+        Date bef = new Date();
+        Date aft = new Date();
+        
+        long dif = aft.getTime()-bef.getTime();
+
+        assertEquals("El algoritmo parece muy lento.", true, dif < 100);
+        
+        
         notaLocal = 1.0;
         System.out.format("Ejercicio 2: %.2f%n", notaLocal);
         nota += notaLocal;
